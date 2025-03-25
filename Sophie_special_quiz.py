@@ -48,7 +48,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Image at top
-st.image("sophie.png", use_column_width=True)
+st.image("sophie.png", use_container_width=True)
 
 st.markdown("<div class='main'>", unsafe_allow_html=True)
 
