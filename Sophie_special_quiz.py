@@ -81,7 +81,8 @@ if st.session_state.q_index < len(questions):
             if option == q["answer"]:
                 st.session_state.score += 1
             st.session_state.q_index += 1
-            st.experimental_rerun()
+            st.rerun()
+
 else:
     st.markdown("---")
     st.markdown(f"<div class='score-box'>You scored {st.session_state.score} out of {len(questions)}</div>", unsafe_allow_html=True)
@@ -98,6 +99,7 @@ else:
     if st.button("Play Again 💫"):
         st.session_state.score = 0
         st.session_state.q_index = 0
-        st.experimental_rerun()
+        st.rerun()
+
 
 st.markdown("</div>", unsafe_allow_html=True)
